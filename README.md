@@ -33,16 +33,20 @@ App: http://78.137.98.23/task18/helloworld.war
     docker build -t task18web -f Dockerfile.web .
 
 ## Publish
-  ECR registry name: task18-registry
-  ECR registry URI: 526502002860.dkr.ecr.eu-west-1.amazonaws.com/task18-registry
-  Publish images to ECR
+  Use Docker Hub for images hosting. Docker Hub user: davidlitest
+  
+  Login:
+    
+    docker login
+  
+  Publish images to registry:
+    
+    docker tag task18app davidlitest/task18app
 
 ## Run
     docker run -d -p 8080:8080 task18app
 
 ## AWS
-  Setup free account: davidli.test@aol.com
-  AWS access ID: AKIAJHW5IUA4FTXRYKNQ
   Default zone: eu-west-1
 
 ## Terraform
