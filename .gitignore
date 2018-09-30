@@ -1,0 +1,14 @@
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.log
+terraform.tfstate
+terraform.tfstate.backup
+terraform.tfvars
+variables_override.tf
+.terraform/
