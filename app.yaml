@@ -1,7 +1,6 @@
 #cloud-config
-
+packages:
+  - docker
 runcmd:
-  - sudo curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-  - sudo chmod 755 /usr/local/bin/docker-compose
   - sudo docker run -d -p 8080:8080 -name task18app davidlitest/task18app:latest
   - sudo docker run -d -p 80:80 -name task18web --link task18app:task18app davidlitest/task18app:latest
